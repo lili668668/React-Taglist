@@ -35,11 +35,19 @@ class Entry extends Component {
         return (
             <div style={Entry.marginCss}>
                 <div style={Entry.css}>
-                    Hello World
+                    {this.props.title}
                 </div>
             </div>
         );
     }
+}
+
+Entry.propTypes = {
+    title: React.PropTypes.string
+}
+
+Entry.defaultProps = {
+    title: 'Hello world'
 }
 
 export default Entry;
