@@ -13,13 +13,24 @@ class AddEntry extends Component {
         return {
             backgroundColor: "green",
             height: this.height + "vw",
-            borderRadius: "5px"
+            borderRadius: "5px",
+            color: "white",
+            fontSize: "20px",
+            display: "inline-block",
+            width: "calc(100% - " + this.buttonCss.width + ")"
         }
     }
 
     static get marginCss() {
         return {
             padding: this.margin + "vw"
+        }
+    }
+
+    static get buttonCss() {
+        return {
+            display: "inline-block",
+            width: "5vw"
         }
     }
 
@@ -32,9 +43,10 @@ class AddEntry extends Component {
     render() {
         return (
             <div style={AddEntry.marginCss}>
-                <div style={AddEntry.css}>
-                    Hello World
-                </div>
+                <form>
+                    <input style={AddEntry.buttonCss} type="submit" value="新增" />
+                    <input style={AddEntry.css} type="text" />
+                </form>
             </div>
         );
     }
