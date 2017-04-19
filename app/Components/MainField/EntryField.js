@@ -24,25 +24,22 @@ class EntryField extends Component {
     render() {
         return (
             <div style={EntryField.css}>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
-                <Entry/>
+                {
+                    this.props.entries.map((entry) => (
+                        <Entry title={entry.title}/>
+                    ))
+                }
             </div>
         );
     }
+}
+
+EntryField.propTypes = {
+    entries: React.PropTypes.array
+}
+
+EntryField.defaultProps = {
+    entries: []
 }
 
 export default EntryField;
