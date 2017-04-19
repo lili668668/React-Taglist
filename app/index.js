@@ -11,6 +11,15 @@ class App extends React.Component {
       width: '100%'
     }
   }
+
+  static get tableCss() {
+    return {
+      display: "table",
+      height: "calc(100% - " + ToolBar.height + "vw)",
+      width: '100%'
+    }
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -20,8 +29,10 @@ class App extends React.Component {
     return (
       <div style={App.css}>
         <ToolBar/>
-        <SideBar/>
-        <MainField/>
+        <div style={App.tableCss}>
+          <SideBar/>
+          <MainField/>
+        </div>
       </div>
     );
   }

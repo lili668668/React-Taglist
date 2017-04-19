@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import ToolBar from './ToolBar.js';
 import SideBar from './SideBar.js';
 
+import AddEntry from '../MainField/AddEntry.js';
+import EntryField from '../MainField/EntryField.js';
+
 class MainField extends Component {
     static get css() {
         return {
-            display: "inline-block",
-            position: "relative",
+            display: "table-cell",
             backgroundColor: "blue",
             height: "calc(100% - " + ToolBar.height + "vw)",
             width: "calc(100% - " + SideBar.width + "vw)"
@@ -22,7 +24,8 @@ class MainField extends Component {
     render() {
         return (
             <div style={MainField.css}>
-                Hello World
+                <AddEntry/>
+                <EntryField/>
             </div>
         );
     }

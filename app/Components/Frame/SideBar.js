@@ -8,11 +8,10 @@ class SideBar extends Component {
 
     static get css() {
         return {
-            display: "inline-block",
+            display: "table-cell",
             position: "relative",
             backgroundColor: 'red',
-            width: this.width + 'vw',
-            height: "calc(100% - " + ToolBar.height + "vw)"
+            width: this.width + 'vw'
         }
     }
     constructor(props) {
