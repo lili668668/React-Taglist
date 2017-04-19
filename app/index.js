@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SideBar from './Components/SideBar';
-import ToolBar from './Components/ToolBar';
-import MainField from './Components/MainField';
+import SideBar from './Components/Frame/SideBar';
+import ToolBar from './Components/Frame/ToolBar';
+import MainField from './Components/Frame/MainField';
 
 class App extends React.Component {
   static get css() {
