@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-
-const css = {
-    backgroundColor: 'red',
-    width: '20vw',
-    height: document.documentElement.clientHeight
-}
+import ToolBar from './ToolBar.js';
 
 class SideBar extends Component {
+    static get css() {
+        return {
+            backgroundColor: 'red',
+            width: '20vw',
+            height: "calc(100% - " + ToolBar.height + "vw)"
+        }
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +16,7 @@ class SideBar extends Component {
     }
     render() {
         return (
-            <div style={css}>
+            <div style={SideBar.css}>
                 Hello World
             </div>
         );
