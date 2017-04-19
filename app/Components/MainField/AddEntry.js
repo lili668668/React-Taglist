@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 
 class AddEntry extends Component {
     static get height() {
-        return 5;
+        return 4;
+    }
+
+    static get margin() {
+        return 1;
     }
 
     static get css() {
         return {
-            backgroundColor: "yellow",
-            height: this.height + 'vw'
+            backgroundColor: "green",
+            height: this.height + "vw",
+            borderRadius: "5px"
+        }
+    }
+
+    static get marginCss() {
+        return {
+            padding: this.margin + "vw"
         }
     }
 
@@ -20,8 +31,10 @@ class AddEntry extends Component {
 
     render() {
         return (
-            <div style={AddEntry.css}>
-                Hello World
+            <div style={AddEntry.marginCss}>
+                <div style={AddEntry.css}>
+                    Hello World
+                </div>
             </div>
         );
     }
