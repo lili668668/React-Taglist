@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SideBar from './Components/SideBar';
 import ToolBar from './Components/ToolBar';
+import MainField from './Components/MainField';
 
 class App extends React.Component {
   static get css() {
@@ -20,6 +21,7 @@ class App extends React.Component {
       <div style={App.css}>
         <ToolBar/>
         <SideBar/>
+        <MainField/>
       </div>
     );
   }

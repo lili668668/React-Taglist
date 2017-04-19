@@ -8,7 +8,7 @@ class ToolBar extends Component {
     static get css() {
         return {
             backgroundColor: "yellow",
-            height: this.height + 'vw'
+            height: ToolBar.height + 'vw'
         }
     }
 
